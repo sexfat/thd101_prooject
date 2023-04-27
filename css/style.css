@@ -11,12 +11,12 @@ body {
 }
 
 .wrapper {
-  width: 1366px;
-  margin: 0 auto;
+  width: 100%;
 }
 
-.full {
-  width: 100%;
+.fixed {
+  width: 1366px;
+  margin: 0 auto;
 }
 
 h1 {
