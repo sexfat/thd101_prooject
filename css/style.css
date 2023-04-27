@@ -28,6 +28,18 @@ span {
   background-color: #005eea;
 }
 
+.btn_large {
+  padding: 8px 10px;
+  text-align: center;
+  background-color: #ff7b00;
+  max-width: 180px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn_large:hover {
+  background-color: #cc6200;
+}
+
 body {
   font-size: 16px;
   background-color: #cacaca;

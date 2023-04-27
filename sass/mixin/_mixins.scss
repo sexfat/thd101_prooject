@@ -15,7 +15,7 @@
 
 // mixin btn
 
-@mixin btn($w:120px , $bgc:#1e78ff){
+@mixin btn($w:120px, $bgc:#1e78ff){
    padding: 8px 10px;
    text-align: center; 
    background-color: $bgc;
@@ -29,4 +29,8 @@
 
 .btn {
    @include btn();
+}
+
+.btn_large {
+  @include btn(180px ,#ff7b00);
 }
