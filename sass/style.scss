@@ -3,6 +3,10 @@
 @import './base/color';
 // @import './plugin/';
 
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+/*---------------------end-----------------------------*/
+
 @import './mixin/mixins';
 
 @import './component/body';
@@ -22,14 +26,7 @@
 @import './page/about';
 
 
-$class: top;
-
-.#{$class} {
-  top: 20px;
-}
-
-
-
+$blue:    #0d6efd;
 
 
 
