@@ -1,0 +1,21 @@
+
+$a: 20; //全域變數
+h1 {
+  $a: 160; //區域變數
+  margin: $h1-space;
+
+  @if $a > 100 {
+    padding: $a;
+  } @else {
+    padding: null;
+  }
+}
+
+h2 {
+  font-size: $a + px;
+}
+
+
+h3 {
+    font-size: map-get($title, h1); // map-get sass 內建函式
+  }
