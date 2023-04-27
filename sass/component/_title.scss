@@ -41,8 +41,6 @@ $list : a1 a2 a3 b1; // list
     }
 }
 
-
-
 @each $k , $v in $color 
   {
     #{$k} {
