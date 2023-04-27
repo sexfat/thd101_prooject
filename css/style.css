@@ -43,9 +43,24 @@ body {
   width: 100%;
   margin: auto;
 }
+@media all and (max-width: 414px) {
+  .fixed {
+    width: 100%;
+  }
+}
 
 .container {
   background-color: #868686;
+}
+@media all and (max-width: 768px) {
+  .container {
+    background-color: #30f86c;
+  }
+}
+@media all and (max-width: 414px) {
+  .container {
+    background-color: #203ec0;
+  }
 }
 
 section {

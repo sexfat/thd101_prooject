@@ -1,24 +1,30 @@
 body {
-    font-size: $fontSize;
-    background-color: $bgc;
-    color: #333;
+  font-size: $fontSize;
+  background-color: $bgc;
+  color: #333;
+}
+
+.wrapper {
+  @include layout(100);
+}
+
+.fixed {
+  @include layout(1366px);
+  @include m() {
+    @include layout(100);
   }
+}
 
-  .wrapper {
-   @include layout(100);
+.container {
+  background-color: #868686;
+  @include t() {
+    background-color: #30f86c;
   }
-
-  .fixed {
-   @include layout(1366px);
-    
+  @include m() {
+    background-color: #203ec0;
   }
+}
 
-  .container {
-       background-color: #868686;
-  }
-
-  section {
-     @include layout(1366px); 
- }
- 
-
+section {
+  @include layout(1366px);
+}
