@@ -15,3 +15,29 @@ $b: 30px !default; // 提昇
 span {
   font-size: $b;
 }
+
+
+.ws {
+width: 10 + 10 + px;
+height: 20 - 10 + px;
+margin: 10 * 10 + px ;
+padding: 10 + 20 * 3 + px ;
+top : round(134.534px);
+// font : (16px / 20px);
+}
+
+// @if 
+// @else
+// @else if
+
+$borderRadius : false;
+
+.btn-outline {
+   @if $borderRadius {
+       border-radius: 8px;
+   }@else {
+       background-color: aqua;
+   } 
+}
+
+
