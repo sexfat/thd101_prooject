@@ -5,17 +5,20 @@ body {
   }
 
   .wrapper {
-   width:  100%;
+   @include layout(100);
   }
 
   .fixed {
-   max-width: 1366px;
-   width: 100%;
-   margin: 0 auto;
+   @include layout(1366px);
+    
   }
 
   .container {
        background-color: #868686;
   }
 
+  section {
+     @include layout(1366px); 
+ }
+ 
 

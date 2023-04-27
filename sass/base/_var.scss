@@ -26,6 +26,7 @@ top : round(134.534px);
 // font : (16px / 20px);
 }
 
+// 判斷式
 // @if 
 // @else
 // @else if
@@ -40,4 +41,7 @@ $borderRadius : false;
    } 
 }
 
+// 斷點變數
+$m-breakpoint: 720px;
+$t-breakpoint : 1000px;
 

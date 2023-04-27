@@ -41,11 +41,17 @@ body {
 .fixed {
   max-width: 1366px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .container {
   background-color: #868686;
+}
+
+section {
+  max-width: 1366px;
+  width: 100%;
+  margin: auto;
 }
 
 .btn_default {

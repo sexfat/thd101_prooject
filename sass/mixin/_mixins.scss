@@ -1,4 +1,4 @@
-@mixin center($w:300px){
+@mixin center($w: 300px) {
   margin: auto;
   width: $w;
 }
@@ -13,33 +13,63 @@
   background-color: #f20;
 }
 // mixin btn
-@mixin btn($style, $w:120px, $bgc:#1e78ff){
-  .btn_#{$style} {  
+@mixin btn($style, $w: 120px, $bgc: #1e78ff) {
+  .btn_#{$style} {
     padding: 8px 10px;
-    text-align: center; 
+    text-align: center;
     background-color: $bgc;
     max-width: $w;
-    cursor: pointer; 
-    transition: all .8s ease;
+    cursor: pointer;
+    transition: all 0.8s ease;
     border-radius: 6px;
     @content;
     &:hover {
-        background-color: darken($bgc, 30);
+      background-color: darken($bgc, 30);
     }
-   }
- }
- 
+  }
+}
 
- @mixin btnDefault($w:120px, $bgc:#1e78ff , $borderRadius:null){
-     padding: 8px 10px;
-      text-align: center; 
-      background-color: $bgc;
-      max-width: $w;
-      cursor: pointer; 
-      transition: all .3s ease;
-      border-radius: $borderRadius;
-      &:hover {
-          background-color: darken($bgc, 10);
-      }
-   }
+@mixin btnDefault($w: 120px, $bgc: #1e78ff, $borderRadius: null) {
+  padding: 8px 10px;
+  text-align: center;
+  background-color: $bgc;
+  max-width: $w;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: $borderRadius;
+  &:hover {
+    background-color: darken($bgc, 10);
+  }
+}
 
+// layout
+@mixin layout($w) {
+  @if $w == 100 {
+    width: 100%;
+  } @else {
+    max-width: $w;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+// rwd
+//桌機
+
+//手機
+
+
+
+@mixin m() {
+  @media all and (max-width: $m-breakpoint) {
+    //code 手機板
+    @content;
+  }
+}
+
+@mixin t() {
+  @media all and (max-width: $t-breakpoint) {
+    //code 平板
+    @content;
+  }
+}
