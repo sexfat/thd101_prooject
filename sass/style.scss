@@ -1,0 +1,105 @@
+@import './base/var';
+@import './base/font';
+@import './base/color';
+
+@import './mixin/mixins';
+
+@import './component/body';
+@import './component/btn';
+@import './component/card';
+@import './component/form';
+@import './component/title';
+
+
+@import './layout/header';
+@import './layout/footer';
+@import './layout/login';
+@import './layout/nav';
+
+@import './page/main';
+@import './page/about';
+
+h3 {
+  font-size: map-get($title, h1); // map-get sass 內建函式
+}
+
+
+$a: 20; //全域變數
+h1 {
+  $a: 160; //區域變數
+  margin: $h1-space;
+
+  @if $a > 100 {
+    padding: $a;
+  } @else {
+    padding: null;
+  }
+}
+
+h2 {
+  font-size: $a + px;
+}
+
+// scope 作用域
+
+$b: 20px;
+$b: 30px !default; // 提昇
+
+span {
+  font-size: $b;
+}
+
+// .c {
+//    $c:30px !global;
+//    font-size: $c;
+// }
+
+// .d {
+//   font-size: $c;
+// }
+
+$class: top;
+
+.#{$class} {
+  top: 20px;
+}
+
+// nesting
+
+.wrapper-full {
+  .header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    background-color: map-get($color, primary);
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+    .menu {
+      width: 100%;
+      height: 80px;
+      ul {
+        list-style: none;
+        li {
+          width: 120px;
+          transition: all .3s ease;
+          cursor: pointer;
+          &:hover {
+             color: #fff;
+          }//偽元素
+          &::after {
+            content: '--';
+          }
+          &::before {
+            content: '--';
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
