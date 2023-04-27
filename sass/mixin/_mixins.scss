@@ -1,0 +1,16 @@
+@mixin center($w:300px){
+  margin: auto;
+  width: $w;
+}
+
+.a {
+  @include center();
+  background-color: #fff;
+}
+
+.b {
+  @include center(400px);
+  background-color: #f20;
+}
+
+// mixin btn
