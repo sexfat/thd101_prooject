@@ -6,7 +6,7 @@ span {
 
 body {
   font-size: 16px;
-  background-color: #ddfeff;
+  background-color: #cacaca;
   color: #333;
 }
 
@@ -15,8 +15,13 @@ body {
 }
 
 .fixed {
-  width: 1366px;
+  max-width: 1366px;
+  width: 100%;
   margin: 0 auto;
+}
+
+.container {
+  background-color: #868686;
 }
 
 h1 {
@@ -62,6 +67,10 @@ h3 {
 }
 .header .menu ul li::before {
   content: "--";
+}
+
+footer {
+  background-color: #868686;
 }
 
 .top {

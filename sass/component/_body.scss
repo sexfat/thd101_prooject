@@ -6,12 +6,16 @@ body {
 
   .wrapper {
    width:  100%;
-    
   }
 
   .fixed {
-   width: 1366px;
+   max-width: 1366px;
+   width: 100%;
    margin: 0 auto;
+  }
+
+  .container {
+       background-color: #868686;
   }
 
 
