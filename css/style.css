@@ -1,166 +1,22 @@
-@charset "UTF-8";
-/*css 註解*/
-span {
-  font-size: 20px;
-}
+/* Error: Missing argument $r.
+ *     ,
+ * 2   | @mixin grid($c , $r){
+ *     |        ============= declaration
+ * ... |
+ * 11  | @include grid(12);
+ *     | ^^^^^^^^^^^^^^^^^ invocation
+ *     '
+ *   sass\component\_grid.scss 11:1  grid()
+ *   sass\component\_grid.scss 11:1  @import
+ *   sass\style.scss 13:9            root stylesheet */
 
-.ws {
-  width: 20px;
-  height: 10px;
-  margin: 100px;
-  padding: 70px;
-  top: 135px;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Missing argument $r.\a     \2577 \a 2   \2502  @mixin grid($c , $r){\d\a     \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a... \2502 \a 11  \2502  @include grid(12);\d\a     \2502  ^^^^^^^^^^^^^^^^^ invocation\a     \2575 \a   sass\\component\\_grid.scss 11:1  grid()\a   sass\\component\\_grid.scss 11:1  @import\a   sass\\style.scss 13:9            root stylesheet";
 }
-
-.btn-outline {
-  background-color: aqua;
-}
-
-.a {
-  margin: auto;
-  width: 300px;
-  background-color: #fff;
-}
-
-.b {
-  margin: auto;
-  width: 400px;
-  background-color: #f20;
-}
-
-body {
-  font-size: 16px;
-  background-color: #cacaca;
-  color: #333;
-}
-
-.wrapper {
-  width: 100%;
-}
-
-.fixed {
-  max-width: 1366px;
-  width: 100%;
-  margin: auto;
-}
-@media all and (max-width: 414px) {
-  .fixed {
-    width: 100%;
-  }
-}
-
-.container {
-  background-color: #868686;
-}
-@media all and (max-width: 768px) {
-  .container {
-    background-color: #30f86c;
-  }
-}
-@media all and (max-width: 414px) {
-  .container {
-    background-color: #203ec0;
-  }
-}
-
-section {
-  max-width: 1366px;
-  width: 100%;
-  margin: auto;
-}
-
-.btn_default {
-  padding: 8px 10px;
-  text-align: center;
-  background-color: #1e78ff;
-  max-width: 120px;
-  cursor: pointer;
-  transition: all 0.8s ease;
-  border-radius: 6px;
-}
-.btn_default:hover {
-  background-color: #003584;
-}
-
-.btn_large {
-  padding: 8px 10px;
-  text-align: center;
-  background-color: #bde700;
-  max-width: 180px;
-  cursor: pointer;
-  transition: all 0.8s ease;
-  border-radius: 6px;
-}
-.btn_large:hover {
-  background-color: #404e00;
-}
-
-.btn_error {
-  padding: 8px 10px;
-  text-align: center;
-  background-color: #c90000;
-  max-width: 120px;
-  cursor: pointer;
-  transition: all 0.8s ease;
-  border-radius: 6px;
-  border-radius: initial;
-  margin: 0 auto;
-}
-.btn_error:hover {
-  background-color: #300000;
-}
-
-h1 {
-  margin: 10px 20px 10px 0;
-  padding: 160;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-h3 {
-  font-size: 40px;
-}
-
-.header {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  background-color: rgb(79, 79, 255);
-}
-.header .logo {
-  width: 80px;
-  height: 80px;
-}
-.header .menu {
-  width: 100%;
-  height: 80px;
-}
-.header .menu ul {
-  list-style: none;
-}
-.header .menu ul li {
-  width: 120px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.header .menu ul li:hover {
-  color: #fff;
-}
-.header .menu ul li::after {
-  content: "--";
-}
-.header .menu ul li::before {
-  content: "--";
-}
-
-footer {
-  background-color: #868686;
-}
-
-.top {
-  top: 20px;
-}
-
-/*# sourceMappingURL=style.css.map */
