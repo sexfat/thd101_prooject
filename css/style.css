@@ -123,6 +123,66 @@ h3 {
   font-size: 40px;
 }
 
+.banner_a1 {
+  background-image: url("./a1.jpg");
+  width: 100%;
+}
+
+.banner_a2 {
+  background-image: url("./a2.jpg");
+  width: 100%;
+}
+
+.banner_a3 {
+  background-image: url("./a3.jpg");
+  width: 100%;
+}
+
+.banner_b1 {
+  background-image: url("./b1.jpg");
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+span {
+  font-size: 16px;
+}
+
+body {
+  font-size: 14px;
+}
+
+#app {
+  font-size: 18px;
+}
+
+.box {
+  font-size: 40px;
+}
+
+.primary {
+  background-color: rgb(79, 79, 255);
+}
+
+.secondary {
+  background-color: #09ffad;
+}
+
+.btnColor {
+  background-color: #f56134;
+}
+
 .red {
   background-color: #f55050;
   height: 300px;
@@ -271,7 +331,6 @@ h3 {
   width: 100%;
   margin: 0 auto;
   display: flex;
-  background-color: rgb(79, 79, 255);
 }
 .header .logo {
   width: 80px;

@@ -19,3 +19,36 @@ h2 {
 h3 {
     font-size: map-get($title, h1); // map-get sass 內建函式
   }
+
+
+// each
+$list : a1 a2 a3 b1; // list
+
+@each $k in $list {
+   .banner_#{$k} {
+     background-image: url('./#{$k}.jpg');
+     width: 100%;
+   } 
+}
+
+// maps 
+
+
+
+@each $k , $v  in $titles {
+    #{$k} {
+      font-size: $v;
+    }
+}
+
+
+
+@each $k , $v in $color 
+  {
+    #{$k} {
+      background-color: $v;
+    }
+}
+
+
+

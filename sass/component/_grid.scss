@@ -30,9 +30,7 @@ height: 300px;
     }@else {
         .col-#{$i} {
             width: ($i / $c) * 100%;
-   
           }
-
     }
   }
 }
@@ -52,3 +50,6 @@ height: 300px;
 @include m() {
   @include grid(12 , sm);
 }
+
+
+
