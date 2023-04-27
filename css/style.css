@@ -16,6 +16,18 @@ span {
   background-color: #f20;
 }
 
+.btn {
+  padding: 8px 10px;
+  text-align: center;
+  background-color: #1e78ff;
+  max-width: 120px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #005eea;
+}
+
 body {
   font-size: 16px;
   background-color: #cacaca;

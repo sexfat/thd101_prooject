@@ -14,3 +14,19 @@
 }
 
 // mixin btn
+
+@mixin btn($w:120px , $bgc:#1e78ff){
+   padding: 8px 10px;
+   text-align: center; 
+   background-color: $bgc;
+   max-width: $w;
+   cursor: pointer; 
+   transition: all .3s ease;
+   &:hover {
+       background-color: darken($bgc, 10);
+   }
+}
+
+.btn {
+   @include btn();
+}
