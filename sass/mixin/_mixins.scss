@@ -12,25 +12,34 @@
   @include center(400px);
   background-color: #f20;
 }
-
 // mixin btn
-
-@mixin btn($w:120px, $bgc:#1e78ff){
-   padding: 8px 10px;
-   text-align: center; 
-   background-color: $bgc;
-   max-width: $w;
-   cursor: pointer; 
-   transition: all .3s ease;
-   &:hover {
-       background-color: darken($bgc, 10);
+@mixin btn($style, $w:120px, $bgc:#1e78ff){
+  .btn_#{$style} {  
+    padding: 8px 10px;
+    text-align: center; 
+    background-color: $bgc;
+    max-width: $w;
+    cursor: pointer; 
+    transition: all .8s ease;
+    border-radius: 6px;
+    @content;
+    &:hover {
+        background-color: darken($bgc, 30);
+    }
    }
-}
+ }
+ 
 
-.btn {
-   @include btn();
-}
+ @mixin btnDefault($w:120px, $bgc:#1e78ff , $borderRadius:null){
+     padding: 8px 10px;
+      text-align: center; 
+      background-color: $bgc;
+      max-width: $w;
+      cursor: pointer; 
+      transition: all .3s ease;
+      border-radius: $borderRadius;
+      &:hover {
+          background-color: darken($bgc, 10);
+      }
+   }
 
-.btn_large {
-  @include btn(180px ,#ff7b00);
-}

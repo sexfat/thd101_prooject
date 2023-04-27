@@ -1,0 +1,15 @@
+@include btn('default');
+@include btn('large' , 180px , #bde700);
+@include btn('error' , 120px , #c90000){
+    border-radius: initial;
+    margin: 0 auto;
+};
+ 
+
+//  .btn_small {
+//     @include btn(90px , #f20);
+//  }
+ 
+//  .btn_large {
+//    @include btn(180px ,#ff7b00);
+//  }

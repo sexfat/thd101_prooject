@@ -16,30 +16,6 @@ span {
   background-color: #f20;
 }
 
-.btn {
-  padding: 8px 10px;
-  text-align: center;
-  background-color: #1e78ff;
-  max-width: 120px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.btn:hover {
-  background-color: #005eea;
-}
-
-.btn_large {
-  padding: 8px 10px;
-  text-align: center;
-  background-color: #ff7b00;
-  max-width: 180px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.btn_large:hover {
-  background-color: #cc6200;
-}
-
 body {
   font-size: 16px;
   background-color: #cacaca;
@@ -58,6 +34,47 @@ body {
 
 .container {
   background-color: #868686;
+}
+
+.btn_default {
+  padding: 8px 10px;
+  text-align: center;
+  background-color: #1e78ff;
+  max-width: 120px;
+  cursor: pointer;
+  transition: all 0.8s ease;
+  border-radius: 6px;
+}
+.btn_default:hover {
+  background-color: #003584;
+}
+
+.btn_large {
+  padding: 8px 10px;
+  text-align: center;
+  background-color: #bde700;
+  max-width: 180px;
+  cursor: pointer;
+  transition: all 0.8s ease;
+  border-radius: 6px;
+}
+.btn_large:hover {
+  background-color: #404e00;
+}
+
+.btn_error {
+  padding: 8px 10px;
+  text-align: center;
+  background-color: #c90000;
+  max-width: 120px;
+  cursor: pointer;
+  transition: all 0.8s ease;
+  border-radius: 6px;
+  border-radius: initial;
+  margin: 0 auto;
+}
+.btn_error:hover {
+  background-color: #300000;
 }
 
 h1 {
