@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sexfat/thd101_prooject#readme",
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "gsap": "^3.11.5",
     "jquery": "^3.6.4",
     "vue": "^3.2.47"
   }
