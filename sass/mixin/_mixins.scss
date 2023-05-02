@@ -73,3 +73,19 @@
     @content;
   }
 }
+
+
+@mixin grid($c, $r:null) {
+  @for $i from 1 through $c {
+    @if $r {
+      .col-#{$r}-#{$i} {
+        width: ($i / $c) * 100%;
+      
+      }
+    }@else {
+        .col-#{$i} {
+            width: ($i / $c) * 100%;
+          }
+    }
+  }
+}
