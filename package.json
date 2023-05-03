@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "安裝套件" : "npm i",
     "開發": "gulp dev",
     "上線": "gulp online"
   },
