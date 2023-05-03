@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     @@include('./layout/style.html', {
-        title : '首頁'
+        title : '產品頁'
 
     })
   </head>
   <body>
-    <div class="wrapper index">
+    <div class="wrapper product">
       @@include('./layout/login.html')  
       <!-- header -->
       @@include('./layout/header.html', {
-         index : 'active'
-      })
+        product : 'active'
+     })
       <!-- header end -->
       <div class="container fixed">
         <!-- content -->

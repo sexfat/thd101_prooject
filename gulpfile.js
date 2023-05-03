@@ -68,3 +68,6 @@ function html() {
     )
     .pipe(dest("./dist/"));
 }
+
+
+exports.t = html; 
