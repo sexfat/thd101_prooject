@@ -2,10 +2,15 @@ body {
   font-size: $fontSize;
   background-color: $bgc;
   color: #333;
+  @include m(){
+    background-color: #333;
+
+  }
 }
 
 .wrapper {
-  @include layout(100);
+  @include layout(1400);
+  height: 1800px;
 }
 
 .fixed {
