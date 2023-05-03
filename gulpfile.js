@@ -79,7 +79,6 @@ function watchTask() {
 
 
 //瀏覽器同步
-
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
@@ -97,3 +96,39 @@ function browser(done) {
 }
 
 exports.default = browser
+
+
+// 壓縮圖片
+
+const imagemin = require('gulp-imagemin');
+
+function img(){
+   return src('./images/*.*')
+   .pipe(imagemin([
+      imagemin.mozjpeg({quality: 70, progressive: true}) // 壓縮品質  quality越低 -> 壓縮越大 -> 品質越差 
+  ]))
+   .pipe(dest('./dist/images/'))
+}
+
+
+exports.p = img;
+
+
+
+// js es5
+const babel = require('gulp-babel');
+
+function babel5() {
+    return src('js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(dest('dist/js'));
+}
+
+exports.js = babel5
+
+
+
+
+
