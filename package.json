@@ -22,5 +22,8 @@
     "gsap": "^3.11.5",
     "jquery": "^3.6.4",
     "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
