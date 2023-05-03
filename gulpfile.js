@@ -75,3 +75,25 @@ function watchTask() {
  }
  
  exports.w = watchTask;
+
+
+
+//瀏覽器同步
+
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+function browser(done) {
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+            index: "index.html"
+        },
+        port: 3000
+    });
+    watch(["./sass/*.scss", "./sass/**/*.scss"], sassstyle).on('change' , reload);
+    watch(['./*.html' , './layout/*.html'] , html).on('change' , reload);
+    done();
+}
+
+exports.default = browser
