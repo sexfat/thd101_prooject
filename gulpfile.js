@@ -24,9 +24,35 @@ exports.p = parallel(TaskA, TaskB); // 同步執行
 
 // =========================   src / dest ======================== //
 
+const sass = require("gulp-sass")(require("sass"));
+const cleanCSS = require("gulp-clean-css");
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+
 function sassstyle() {
-  return src("./sass/style.scss").pipe(dest("./dist/css"));
+  return (
+    src("./sass/style.scss")
+     .pipe(sourcemaps.init())
+      //編譯 sass
+      .pipe(sass.sync().on("error", sass.logError))
+      .pipe(sourcemaps.write())
+      //css 壓縮
+      // .pipe(cleanCSS())
+      // 跨瀏覽器
+      .pipe(
+        autoprefixer({
+          cascade: false,
+        })
+      )
+      .pipe(dest("./dist/css"))
+  );
 }
 
-exports.style = sassstyle
+exports.style = sassstyle;
 
+
+function watchTask(){
+      watch(['./sass/*.scss' , './sass/**/*.scss'] ,sassstyle)
+}
+
+exports.w = watchTask;
