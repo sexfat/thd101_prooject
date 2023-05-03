@@ -129,6 +129,18 @@ function babel5() {
 exports.js = babel5
 
 
+const uglify = require('gulp-uglify');
+function ugjs(){
+  return src('js/*.js')
+  .pipe(babel({
+   presets: ['@babel/env']
+})).pipe(uglify())
+  .pipe(dest('dist/js'))
+}
+
+exports.jsmin = ugjs
+
+
 
 
 
