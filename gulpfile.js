@@ -50,11 +50,7 @@ function sassstyle() {
 
 exports.style = sassstyle;
 
-function watchTask() {
-  watch(["./sass/*.scss", "./sass/**/*.scss"], sassstyle);
-}
 
-exports.w = watchTask;
 
 // html template
 const fileinclude = require("gulp-file-include");
@@ -71,3 +67,11 @@ function html() {
 
 
 exports.t = html; 
+
+
+function watchTask() {
+   watch(["./sass/*.scss", "./sass/**/*.scss"], sassstyle);
+   watch(['./*.html' , './layout/*.html'] , html);
+ }
+ 
+ exports.w = watchTask;
