@@ -26,13 +26,13 @@ exports.p = parallel(TaskA, TaskB); // 同步執行
 
 const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
-const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require("gulp-autoprefixer");
+const sourcemaps = require("gulp-sourcemaps");
 
 function sassstyle() {
   return (
     src("./sass/style.scss")
-     .pipe(sourcemaps.init())
+      .pipe(sourcemaps.init())
       //編譯 sass
       .pipe(sass.sync().on("error", sass.logError))
       .pipe(sourcemaps.write())
@@ -50,9 +50,21 @@ function sassstyle() {
 
 exports.style = sassstyle;
 
-
-function watchTask(){
-      watch(['./sass/*.scss' , './sass/**/*.scss'] ,sassstyle)
+function watchTask() {
+  watch(["./sass/*.scss", "./sass/**/*.scss"], sassstyle);
 }
 
 exports.w = watchTask;
+
+// html template
+const fileinclude = require("gulp-file-include");
+
+function html() {
+  return src("./*.html")
+    .pipe(fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
+    .pipe(dest("./dist/"));
+}
