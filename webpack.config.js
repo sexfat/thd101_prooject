@@ -79,6 +79,7 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery'
         }),
+        // vue 解決路徑問題
         new webpack.DefinePlugin({
             __VUE_OPTIONS_API__: true,
             __VUE_PROD_DEVTOOLS__: true,
