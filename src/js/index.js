@@ -1,8 +1,16 @@
 // jquery
 import $ from "jquery";
+import gsap from "gsap";
+import './style.css';
 
 
 $('body').css("background-color" , "blue");
+
+gsap.to('.box', {
+  x: 500,
+  y: 400,
+  duration: 1
+});
 
 
 //

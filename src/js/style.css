@@ -1,0 +1,11 @@
+.wrapper {
+   width: 1366px;
+   margin: 0 auto;
+   background-color: #0e9fff;
+   height: 100vh;
+}
+.box {
+   width: 100px;
+   height: 100px;
+   background-color: #f89500;
+}
