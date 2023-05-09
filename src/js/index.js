@@ -1,8 +1,11 @@
 // jquery
 import $ from "jquery";
 import gsap from "gsap";
+// css樣式
 import './style.css';
 import './about.css';
+//sass 樣式
+import './index.scss';
 
 //jquery
 $('body').css("background-color" , "blue");
