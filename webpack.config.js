@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+const webpack  = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {
@@ -21,22 +21,40 @@ module.exports = {
         rules: [{
             // 格式
             test: /\.(sass|scss|css)$/,
-            //順序是由下到上 sass > css > style
+            //順序是由下到上 css > style
             use: [{
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                  publicPath: './dist'
-                }
-              },
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                      publicPath: './dist'
+                    }
+                  },
+                // 'style-loader',//跟MiniCssExtractPlugin 會衝突所以要關掉
                 'css-loader',
                 'sass-loader'
             ],
-        }]
+        },
+        //babel loader
+        {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
 
-    },              // 處裡對應模組
+            use: [{
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }],
+            include: path.resolve(__dirname, 'src'),
+        },
+        //  後續增加的 loader 位址
+        
+      ]
+
+    },             // 處裡對應模組
     plugins: [
           //清理舊的檔案
         new CleanWebpackPlugin(),
+        //css 產出
         new MiniCssExtractPlugin({
             filename: "./css/[name].css"
         }),
@@ -55,6 +73,11 @@ module.exports = {
             //來源
             filename : 'about.html'
             // 目的地
+        }),
+        //全域載入jquery
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         }),
         new webpack.DefinePlugin({
             __VUE_OPTIONS_API__: true,

@@ -1,5 +1,4 @@
 // jquery
-import $ from "jquery";
 import gsap from "gsap";
 // css樣式
 import './style.css';
