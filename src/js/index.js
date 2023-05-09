@@ -2,6 +2,7 @@
 import $ from "jquery";
 import gsap from "gsap";
 import './style.css';
+import './about.css';
 
 //jquery
 $('body').css("background-color" , "blue");
@@ -12,7 +13,8 @@ gsap.to('.box', {
   x: 500,
   y: 400,
   duration: 5,
-  backgroundColor: "green"
+  backgroundColor: "green",
+  rotation : 360
 });
 
 
